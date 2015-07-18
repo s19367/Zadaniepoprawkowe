@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 require_once 'witcher.php';
 include_once 'creature.php';
@@ -25,9 +25,20 @@ switch($_POST['btn'])
             echo '<p> pudło! </p>';
         $ap--;
         break;
-    
+    case 2:
 
-
+        break;
+    case 3:
+        break;
+    case 4:
+        break;
+    case 5:
+        break;
+    case 6:
+        break;
+    case 6:
+        break;
+    default:
         echo '<p> action error </p>';
 }
 ?>
