@@ -27,6 +27,8 @@ $monster->stats();
 
 $_SESSION['witcher'] = serialize($witcher);
 $_SESSION['monster'] = serialize($monster);
+static $count = 0;
+$_SESSION['count'] = serialize($count);
 
 
 ?>
