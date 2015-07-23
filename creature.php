@@ -155,16 +155,19 @@ class creature
     public function SK($zratt, $zrobr)
     {
         $SK = $zratt-$zrobr;
+        $SK=$SK/$zrobr;
         if ($SK<10)
         {
             $SK=10;
         }
         else
         {
-            $SK=$SK/$zrobr;
+
             if ($SK > 90)
                 $SK=90;
+
         }
+        echo $SK;
         return $SK;
     }
 
