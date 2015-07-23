@@ -69,7 +69,7 @@ else
 
     $rand = rand(0, 100);
     $SK=$monster->sk($monster->getagi(), $witcher->getagi());
-    if ($SK>=$rand)
+    if ($rand<=$SK)
     {
         $witcher->setlive($witcher->getlive() - $monster->getstr());
         echo '<p> sukces! </p>';
