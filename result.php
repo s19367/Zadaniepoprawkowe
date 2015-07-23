@@ -39,7 +39,7 @@ switch($_POST['btn'])
         }
         $rand = rand(1, 100);
         $SK=$witcher->sk($witcher->getagi(), $monster->getagi());
-        if ($SK>=$rand)
+        if ($rand<=$SK)
         {
             $monster->setlive($monster->getlive() - $witcher->getstr());
             echo '<p> sukces! </p>';
@@ -97,10 +97,16 @@ switch($_POST['btn'])
             case 1:
                 $bonus = $ex->drink();
                 $witcher->setspeed($witcher->getspeed()+$bonus);
+                $penality=$witcher->getlivemax();
+                $penality = $penality/20;
+                $witcher->setlive($witcher->getlive() - $penality);
                 break;
             case 2:
                 $bonus = $ex->drink();
                 $witcher->setstr($witcher->getstr() + $bonus);
+                $penality=$witcher->getlivemax();
+                $penality = $penality/20;
+                $witcher->setlive($witcher->getlive() - $penality);
                 break;
             case 3:
                 $bonus = $ex->drink();
