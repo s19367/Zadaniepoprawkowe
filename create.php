@@ -1,6 +1,7 @@
 <?php
 require_once 'witcher.php';
 include_once 'creature.php';
+include_once 'eliksir.php';
 session_start();
 $speed = $_POST['speed'];
 $str = $_POST['str'];
@@ -29,6 +30,7 @@ $_SESSION['witcher'] = serialize($witcher);
 $_SESSION['monster'] = serialize($monster);
 static $count = 0;
 $_SESSION['count'] = serialize($count);
+$_SESSION['eliksir'] = serialize(new eliksir(null, null));
 
 
 ?>
